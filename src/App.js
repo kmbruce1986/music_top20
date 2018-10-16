@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import MusicLibrary from './containers/MusicLibrary.js'
+
 
 class App extends Component {
   render() {
     return (
-      
+      <MusicLibrary />
     );
   }
 }
