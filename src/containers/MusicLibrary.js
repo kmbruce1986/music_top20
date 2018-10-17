@@ -10,11 +10,22 @@ class MusicLibrary extends Component {
     }
   }
 
+  componentDidMount(){
+  const url = 'https://itunes.apple.com/gb/rss/topsongs/limit=20/json';
+  fetch(url)
+  .then((res) => res.json())
+  .then((songs) => {
+      this.setState({songs: songs})
+  })
+}
+
   render(){
     return (
-      <div className="music-library">
+      <div>
         <h2>Top 20</h2>
-        <MusicList />
+        <MusicList
+          songs={this.state.songs}
+        />
       </div>
     )
   }
