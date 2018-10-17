@@ -15,6 +15,7 @@ class MusicLibrary extends Component {
   fetch(url)
   .then((res) => res.json())
   .then((songs) => {
+    // console.log(songs);
       this.setState({songs: songs.feed.entry})
   })
 }
